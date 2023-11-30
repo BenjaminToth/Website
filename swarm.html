@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóth Benjámin’s website swarm intelligence project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <link rel="alternate stylesheet" type="text/css" href="styleXL.css" title="large">
+    <script src="styleswitcher.js"></script>
+</head>
+
+<body style="background-image: url('pics/tree.jpeg'); background-size: cover; background-repeat: no-repeat;">
+    <header>
+        <nav id="skip">
+            <p>Skip to main content</p>
+            <a href="content">Skip to main content</a>
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link bottom-link" href="swarm.html">Swarm intelligence</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bike.html">Bike courier project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="thesis.html">BSc Thesis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <article>
+                        <h1>Swarm intelligence</h1>
+                        <section>
+                            <h2>What is swarm intelligence?</h2>
+                            <p>
+                                Swarm intelligence is the collective behavior of decentralized, self-organized
+                                systems, natural or artificial. SI systems consist typically of a population of simple
+                                agents or
+                                boids interacting locally with one another and with their environment. The inspiration
+                                often
+                                comes
+                                from nature, especially biological systems. The agents follow very simple rules, and
+                                although
+                                there
+                                is no centralized control structure dictating how individual agents should behave,
+                                local,
+                                and to
+                                a
+                                certain degree random, interactions between such agents lead to the emergence of
+                                "<em>intelligent</em>"
+                                global behavior, unknown to the individual agents. Examples of swarm intelligence in
+                                natural
+                                systems
+                                include ant colonies, bee colonies, bird flocking.
+                            </p>
+                        </section>
+                        <section>
+                            <h2>About the project:</h2>
+                            <p>
+                                In this project, I modeled an ant colony where the colony's task is to transport
+                                <em>food</em> to
+                                their
+                                <em>home</em>.
+                                The ants start at random points in their world and choose either finding <em>food</em>
+                                or
+                                returning
+                                <em>home</em>
+                                as
+                                their objective. During their search, they can only do two things: transmit information
+                                to
+                                others in
+                                their vicinity about when they last visited either of these two objectives and change
+                                direction
+                                based on the information received from others. In the event that an ant reaches its
+                                desired
+                                destination, it starts searching for the other target.
+                            </p>
+                            <p>
+                                During my project, I created a video showcasing the movement of the ants:
+                            </p>
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Video:</h3>
+                    <video id="video" class="img-fluid" controls poster="pics/cover.jpeg">
+                        <source src="pics/AntSI.mp4" type="video/mp4">
+                    </video>
+                    <p><a href="description.html" class="visited-link">Video description.</a></p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Algorithm:</h3>
+                    <ol>
+                        <li>take a step
+                        <li>increase all the counters by one
+                        <li><strong>if</strong> you bump into one of the items:
+                            <ol>
+                                <li>reset the respective counter</li>
+                                <li><strong>if</strong> this is the destination you were willing to reach:
+                                    <ol>
+                                        <li>turn around 180 degrees</li>
+                                        <li>change the destination objective in your head</li>
+                                    </ol>
+                            </ol>
+                        </li>
+                        <li>shout out the value of one of your counters plus the maximum distance you can be heard at
+                        <li>listen to what the others are shouting
+                        <li><strong>if</strong> you have heard a value less than in your counter:
+                            <ol>
+                                <li>update the respective counter</li>
+                            </ol>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Sources and additional information:
+            <br>Read about it <a href="https://en.wikipedia.org/wiki/Swarm_intelligence" target="_blank" class="visited-link">here</a>.
+            <br>Watch it on YouTube <a href="https://www.youtube.com/watch?v=Yu7sF9rcVJY" target="_blank" class="visited-link">here</a>.
+        </p>
+        <nav id="visuals">
+            <a id="largetxt" class="visited-link" href="swarm.html"
+                onclick="setActiveStyleSheet('large'); return false;"><span class="ikon"></span>Large version</a>
+            <a id="normaltxt" class="visited-link" href="swarm.html"
+                onclick="setActiveStyleSheet('normal'); return false;"><span class="ikon"></span>Normal version</a>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

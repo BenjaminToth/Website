@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóth Benjámin’s website BSc thesis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <link rel="alternate stylesheet" type="text/css" href="styleXL.css" title="large">
+    <script src="styleswitcher.js"></script>
+</head>
+
+<body style="background-image: url('pics/tree.jpeg'); background-size: cover; background-repeat: no-repeat;">
+    <header>
+        <nav id="skip">
+            <p>Skip to main content</p>
+            <a href="content">Skip to main content</a>
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swarm.html">Swarm intelligence</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bike.html">Bike courier project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bottom-link" href="thesis.html">BSc Thesis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="content">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>BSc Thesis</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>About the project:</h2>
+                    <p> This project deals with optimizing deep learning. The goal is to train a neural network in such
+                        a
+                        way that it can classify as many images as possible correctly in the test dataset. The
+                        optimization
+                        is not performed by selecting the usual hyperparameters but through transformations applied to
+                        the
+                        training dataset.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>The data:</h2>
+                    <P>The dataset contains approximately 10,000 samples with 30 classes, consisting of satellite
+                        images.
+                        The images are 600x600 pixel color images.</P>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure>
+                                <img src="pics/SAT1.jpg" class="img-fluid"
+                                    alt="Sample photo of a bridge from the dataset.">
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure>
+                                <img src="pics/SAT2.jpg" class="img-fluid"
+                                    alt="Sample photo of a stadium from the dataset.">
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure>
+                                <img src="pics/SAT3.jpg" class="img-fluid"
+                                    alt="Sample photo of parking from the dataset.">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H2>
+                                The model and its hyperparameters:
+                            </H2>
+                            <P>The neural network I used followed the structure of a <strong>ResNet50</strong> neural
+                                network. It's a
+                                convolutional neural network specifically designed for image classification. I modified
+                                the
+                                output layer because my project has only 30 classes, whereas ResNet50 has 1000 classes
+                                in
+                                its output layer. It's important to note that I imported the ResNet with pretrained
+                                weights.
+                                I set the learning rate to 0.001, and the batch size was set to 32. Utilized the Adam
+                                optimizer and the cross-entropy loss function.
+                            </P>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <H2>Model comparison:</H2>
+                            <table>
+                                <caption>
+                                    <strong>Model configuration table</strong>
+                                    <details>
+                                        <summary>Help</summary>
+                                        <p>Accuracy and loss tabel of tested models.</p>
+                                    </details>
+                                </caption>
+                                <tr>
+                                    <th>Model configuration</th>
+                                    <th>Accuracy</th>
+                                    <th>Loss</th>
+                                </tr>
+                                <tr>
+                                    <td>without pretraining</td>
+                                    <td>0.7350</td>
+                                    <td>1.3124</td>
+                                </tr>
+                                <tr>
+                                    <td>with pretraining</td>
+                                    <td>0.8592</td>
+                                    <td>0.5662</td>
+                                </tr>
+                                <tr>
+                                    <td>optimized hyperparameters</td>
+                                    <td>0.9113</td>
+                                    <td>0.3579</td>
+                                </tr>
+                                <tr>
+                                    <td>optimized transformations</td>
+                                    <td>0.9312</td>
+                                    <td>0.2993</td>
+                                </tr>
+                                <tr>
+                                    <td>synthetic data</td>
+                                    <td>0.9525</td>
+                                    <td>0.2451</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2>Best modell:</h2>
+                                    <p>The best-performing model was the one that worked with generated data. This model
+                                        used a <strong>GAN</strong> (Generative Adversarial Network) to generate data
+                                        for the original
+                                        dataset, and it trained on this augmented dataset. This approach helped mitigate
+                                        the
+                                        risk of overfitting and added diversity to the dataset.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2>Generated images of lakes:</h2>
+                                    <figure>
+                                        <img src="pics/tavak_copy.png" class="img-fluid"
+                                            alt="Sample generated photos of ponds, on a 3x5 grid.">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside>
+            <h2>Original paper:</h2>
+            <p>You can find the original BSc thesis <a href="files/szakdoga.pdf" target="_blank"
+                    class="visited-link">here</a>.
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <nav id="visuals">
+            <a id="largetxt" class="visited-link" href="thesis.html"
+                onclick="setActiveStyleSheet('large'); return false;"><span class="ikon"></span>Large version</a>
+            <a id="normaltxt" class="visited-link" href="thesis.html"
+                onclick="setActiveStyleSheet('normal'); return false;"><span class="ikon"></span>Normal version</a>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

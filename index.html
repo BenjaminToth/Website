@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóth Benjámin’s website homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <link rel="alternate stylesheet" type="text/css" href="styleXL.css" title="large">
+    <script src="styleswitcher.js"></script>
+</head>
+
+
+<body style="background-image: url('pics/tree.jpeg'); background-size: cover; background-repeat: no-repeat;">
+    <header>
+        <nav id="skip">
+            <p>Skip to main content</p>
+            <a href="content">Skip to main content</a>
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand bottom-link" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swarm.html">Swarm intelligence</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bike.html">Bike courier project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="thesis.html">BSc Thesis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Tóth Benjámin’s website</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <p>The purpose of this website is to showcase some of my <strong>Python</strong>
+                                projects
+                                that I created
+                                during
+                                my studies in mathematics at Eötvös Loránd Tudományegyetem (ELTE) in Budapest.
+                                The website offers a <strong>surface-level</strong> introduction to these projects.
+                                For
+                                a deeper
+                                understanding, I have attached useful links located at the end of the project
+                                descriptions.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form action="mailto:toth.benjamin2000@gmail.com" method="post" enctype="text/plain">
+                                <fieldset>
+                                    <legend>Contact me</legend>
+                                    <label for="contact_name"><strong>Name</strong></label><br>
+                                    <input type="text" name="name" id="contact_name" size="51" maxlength="50"><br>
+
+                                    <label for="Comment"><strong>Comment</strong></label><br>
+                                    <textarea name="comment" id="Comment" cols="50" rows="5" maxlength="400"></textarea><br>
+                                    <label for="email"><strong>Your email:</strong></label><br>
+                                    <input type="email" name="email" id="email" size="51" maxlength="40"><br>
+                                    <input type="checkbox" name="permission" id="permission" value="igen">
+                                    <label for="permission">I consent to the storage of my data</label>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Which project are you interested in?</legend>
+                                    <p>Projects:<br>
+                                        <input type="radio" name="project" id="p1" value="1"><label for="p1">Swarm
+                                            intelligence</label>
+                                        <input type="radio" name="project" id="p2" value="2"><label for="p2">Bike
+                                            courier</label>
+                                        <input type="radio" name="project" id="p3" value="3"><label for="p3">BSc
+                                            thesis</label>
+                                    </p>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="submit" value="Submit">
+                                    <input type="reset" value="Delet">
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Contact:</h2>
+                            <p>Email: toth.benjamin2000@gmail.com
+                            </p>
+                            <h2>About me:</h2>
+                            <p>My resume can be found <a href="files/eletrajz.pdf" target="_blank"
+                                    class="visited-link">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav id="visuals">
+            <a id="largetxt" class="visited-link" href="index.html"
+                onclick="setActiveStyleSheet('large'); return false;"><span class="ikon"></span>Large version</a>
+            <a id="normaltxt" class="visited-link" href="index.html"
+                onclick="setActiveStyleSheet('normal'); return false;"><span class="ikon"></span>Normal version</a>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
